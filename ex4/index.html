@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Tempo</title>
+  </head>
+  <body>
+    <h1>Conversor de Tempo</h1>
+    <label for="segundos">Digite o tempo em segundos:</label>
+    <input type="number" id="segundos" />
+    <button onclick="converterTempo()">Converter</button>
+
+    <script>
+      function tempo(segundos) {
+        let horas = Math.floor(segundos / 3600);
+        let minutos = Math.floor((segundos - horas * 3600) / 60);
+        let segundosRestantes = segundos - horas * 3600 - minutos * 60;
+
+        return `${horas}:${minutos}:${segundosRestantes}`;
+      }
+
+      function converterTempo() {
+        let segundos = parseInt(document.getElementById("segundos").value);
+        let resultado = tempo(segundos);
+        document.write(`O tempo em horas:minutos:segundos é ${resultado}`);
+      }
+    </script>
+  </body>
+</html>
