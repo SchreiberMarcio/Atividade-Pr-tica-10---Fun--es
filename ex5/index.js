@@ -6,7 +6,7 @@ próprio.
 Ex: 6 é perfeito, pois 6 = 1 + 2 + 3, que são seus divisores
 */
 
-function ehPerfeito(numero) {
+function ePerfeito(numero) {
   let somaDivisores = 0;
   let divisores = [];
 
@@ -25,7 +25,7 @@ function ehPerfeito(numero) {
 }
 
 let numero = parseInt(prompt("Digite um número inteiro:"));
-let resultado = ehPerfeito(numero);
+let resultado = ePerfeito(numero);
 
 if (resultado.perfeito) {
   document.write(`${numero} é um número perfeito, pois ${numero} = `);
